@@ -1,1 +1,122 @@
-<h1> main topic</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitVerse - Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="fit">FIT</span><span class="verse">VERSE</span>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search" class="search-input">
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Products</a>
+                <div class="cart-icon">
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="notifications">
+                    <span class="notification-count">0</span>
+                </div>
+                <div class="profile">
+                    <div class="profile-avatar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <div class="checkout-container">
+                <!-- Left Section - Checkout Summary -->
+                <div class="checkout-summary">
+                    <h1>Checkout</h1>
+                    
+                    <div class="product-item">
+                        <div class="product-image">
+                            <span class="quantity-badge">4</span>
+                        </div>
+                        <div class="product-details">
+                            <h3>6mm Yoga Mat with Bag</h3>
+                            <span class="product-price">Rs. 2,999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <div class="summary-line">
+                            <span>Subtotal - 2 items</span>
+                            <span>Rs. 11,996.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Shipping</span>
+                            <span>Rs. 604.00</span>
+                        </div>
+                        <div class="total-line">
+                            <strong>Total</strong>
+                            <strong>Rs. 13,100.00</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section - Forms -->
+                <div class="checkout-forms">
+                    <!-- Contact Form -->
+                    <div class="form-section">
+                        <h2>Contact</h2>
+                        <input type="email" placeholder="Enter your email address" class="form-input">
+                    </div>
+
+                    <!-- Shipping Address Form -->
+                    <div class="form-section">
+                        <h2>Shipping Address</h2>
+                        <div class="form-row">
+                            <input type="text" placeholder="First Name" class="form-input half">
+                            <input type="text" placeholder="Last Name" class="form-input half">
+                        </div>
+                        <input type="text" placeholder="Address" class="form-input">
+                        <input type="text" placeholder="Apartment, Suite, etc (Optional)" class="form-input">
+                        <div class="form-row">
+                            <input type="text" placeholder="City" class="form-input half">
+                            <input type="text" placeholder="Postal code (Optional)" class="form-input half">
+                        </div>
+                        <input type="text" placeholder="Phone number" class="form-input">
+                        
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="save-info" class="checkbox">
+                            <label for="save-info">Save these information for next time</label>
+                        </div>
+
+                        <button class="continue-btn">Continue to shipping</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="fit">FIT</span><span class="verse">VERSE</span>
+                    <span class="copyright">Copyright © 2024 FitVerse & Co. All rights reserved</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Terms of Use</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
