@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitVerse - User Management</title>
+    <link rel="stylesheet" href="user-management.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="fit">FIT</span><span class="verse">VERSE</span>
+            </div>
+            <div class="profile-section">
+                <span class="profile-text">Profile</span>
+                <div class="profile-avatar"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Manage Users</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📈</span>
+                    <span class="nav-text">View Reports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Store Analytics</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">System Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>User Management</h1>
+                <div class="controls">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search" class="search-input">
+                    </div>
+                    <div class="sort-container">
+                        <label for="sort-select">Sort by:</label>
+                        <select id="sort-select" class="sort-select">
+                            <option value="relevancy">Relevancy</option>
+                            <option value="name">Name</option>
+                            <option value="date">Date</option>
+                            <option value="role">Role</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Table -->
+            <div class="table-container">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Reg. Number</th>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Controls</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001.</td>
+                            <td>CLI00001</td>
+                            <td>Mr. A. B. C. Perera</td>
+                            <td>Client - Premium Plan</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0002.</td>
+                            <td>CLI00002</td>
+                            <td>Ms. Rachel Green</td>
+                            <td>Client - Free Plan</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0003.</td>
+                            <td>TNR00001</td>
+                            <td>Mr. Joey Tribbiani</td>
+                            <td>Personal Trainer</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0004.</td>
+                            <td>NUT00001</td>
+                            <td>Ms. Phoebe Buffet</td>
+                            <td>Nutritionist</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0005.</td>
+                            <td>SUP00001</td>
+                            <td>Ms. Monica Geller</td>
+                            <td>Supervisor</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0006.</td>
+                            <td>SSUP00001</td>
+                            <td>Mr. Chandler Muriel Bing</td>
+                            <td>Store Supervisor</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0007.</td>
+                            <td>ADM00001</td>
+                            <td>Mr. Ross Geller</td>
+                            <td>Admin</td>
+                            <td>
+                                <a href="#" class="action-link manage">Manage User</a>
+                                <a href="#" class="action-link remove">Remove User</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="fit">FIT</span><span class="verse">VERSE</span>
+                <span class="copyright">Copyright © 2024 FitVerse & Co. All rights reserved</span>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Terms of Use</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="user-management.js"></script>
+</body>
+</html>
