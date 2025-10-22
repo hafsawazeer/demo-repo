@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Modal Functionality</title>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.364.0/dist/umd/lucide.min.js"></script>
+    <link rel="stylesheet" href="assets/css/supervisor_manage.css">
+</head>
+<body>
+    <div style="padding: 20px;">
+        <h1>Test Modal Functionality</h1>
+        
+        <!-- Test button to open view modal -->
+        <button onclick="testViewModal()" class="btn btn-primary">Test View Details Modal</button>
+        
+        <!-- Test View Details Modal -->
+        <div id="viewDetailsModal" class="modal">
+            <div class="modal-content modal-large">
+                <div class="modal-header">
+                    <h2>Nutritionist Details</h2>
+                    <button class="close-btn" onclick="closeViewModal()">
+                        <span class="icon" data-lucide="x"></span>
+                    </button>
+                </div>
+
+                <div class="details-container">
+                    <!-- Personal Information -->
+                    <div class="details-section">
+                        <h3>Personal Information</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Full Name:</span> 
+                                <span class="detail-value">John Doe</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Nutritionist ID:</span> 
+                                <span class="detail-value">NT00001</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Email:</span> 
+                                <span class="detail-value">john.doe@example.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone:</span> 
+                                <span class="detail-value">+1234567890</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status Management -->
+                    <div class="details-section">
+                        <h3>Status Management</h3>
+                        <div class="status-form">
+                            <div class="status-selector">
+                                <label class="status-option">
+                                    <input type="radio" name="status" value="pending"> 
+                                    <span class="status-badge status-pending">Pending</span>
+                                </label>
+                                <label class="status-option">
+                                    <input type="radio" name="status" value="active" checked> 
+                                    <span class="status-badge status-active">Active</span>
+                                </label>
+                                <label class="status-option">
+                                    <input type="radio" name="status" value="inactive"> 
+                                    <span class="status-badge status-inactive">Inactive</span>
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-primary">
+                                <span class="icon" data-lucide="save"></span> Update Status
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        function testViewModal() {
+            document.getElementById('viewDetailsModal').style.display = 'flex';
+        }
+
+        function closeViewModal() {
+            document.getElementById('viewDetailsModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const viewModal = document.getElementById('viewDetailsModal');
+            if (event.target === viewModal) closeViewModal();
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeViewModal();
+            }
+        });
+    </script>
+</body>
+</html>

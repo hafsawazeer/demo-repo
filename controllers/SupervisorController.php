@@ -35,7 +35,7 @@ class SupervisorController {
     public static function addNutritionist($data) {
         try {
             // Validate required fields
-            $required_fields = ['name', 'email', 'phone', 'password', 'gender', 'dob', 'nic', 'specialization', 'experience'];
+            $required_fields = ['name', 'email', 'contact_no', 'password', 'gender', 'dob', 'nic', 'specialization', 'experience'];
             
             foreach ($required_fields as $field) {
                 if (empty($data[$field])) {
@@ -79,7 +79,7 @@ class SupervisorController {
             $result = $model->addNutritionist(
                 trim($data['name']),
                 trim($data['email']),
-                trim($data['phone']),
+                trim($data['contact_no']),
                 $data['password'],
                 $data['gender'],
                 $data['dob'],
@@ -118,7 +118,7 @@ class SupervisorController {
     public static function editNutritionist($data) {
         try {
             // Validate required fields
-            $required_fields = ['nutritionist_id', 'name', 'email', 'phone', 'specialization', 'experience'];
+            $required_fields = ['nutritionist_id', 'name', 'email', 'contact_no', 'specialization', 'experience'];
             
             foreach ($required_fields as $field) {
                 if (empty($data[$field])) {
@@ -143,7 +143,7 @@ class SupervisorController {
                 intval($data['nutritionist_id']),
                 trim($data['name']),
                 trim($data['email']),
-                trim($data['phone']),
+                trim($data['contact_no']),
                 trim($data['specialization']),
                 intval($data['experience']),
                 trim($data['certification'] ?? ''),
@@ -241,7 +241,7 @@ class SupervisorController {
     /**
      * Get nutritionist statistics
      */
-    public static function getNutritionistStatistics() {
+    public static function getNutritionistStats() {
         try {
             $model = new NutritionistModel();
             return $model->getStatistics();
